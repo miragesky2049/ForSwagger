@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swagger.WebApi", "Swagger.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swagger.WebApi.Tests", "Swagger.WebApi.Tests\Swagger.WebApi.Tests.csproj", "{D82F5CA0-4BD6-424C-A229-68E3B256D370}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swagger.WebMvc", "Swagger.WebMvc\Swagger.WebMvc.csproj", "{423A3099-F746-41E8-9BF4-69434177DAA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swagger.WebMvc.Tests", "Swagger.WebMvc.Tests\Swagger.WebMvc.Tests.csproj", "{BA9301AF-342F-4A11-8D91-FD3FD0954DCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D82F5CA0-4BD6-424C-A229-68E3B256D370}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D82F5CA0-4BD6-424C-A229-68E3B256D370}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D82F5CA0-4BD6-424C-A229-68E3B256D370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{423A3099-F746-41E8-9BF4-69434177DAA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{423A3099-F746-41E8-9BF4-69434177DAA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{423A3099-F746-41E8-9BF4-69434177DAA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{423A3099-F746-41E8-9BF4-69434177DAA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA9301AF-342F-4A11-8D91-FD3FD0954DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA9301AF-342F-4A11-8D91-FD3FD0954DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA9301AF-342F-4A11-8D91-FD3FD0954DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA9301AF-342F-4A11-8D91-FD3FD0954DCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

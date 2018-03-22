@@ -8,6 +8,10 @@ namespace Swagger.WebApi.Controllers
 {
     public class HomeController : Controller
     {
+        /// <summary>
+        /// home首页
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
