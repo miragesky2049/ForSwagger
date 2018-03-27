@@ -1,11 +1,11 @@
 using System.Web.Http;
 using WebActivatorEx;
-using Swagger.WebApi;
+using Swagger.WebMvc;
 using Swashbuckle.Application;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
-namespace Swagger.WebApi
+namespace Swagger.WebMvc
 {
     public class SwaggerConfig
     {
@@ -16,11 +16,15 @@ namespace Swagger.WebApi
             GlobalConfiguration.Configuration 
                 .EnableSwagger(c =>
                     {
-                        // By default, the service root url is inferred from the request used to access the docs.
-                        // However, there may be situations (e.g. proxy and load-balanced environments) where this does not
-                        // resolve correctly. You can workaround this by providing your own code to determine the root URL.
-                        //
-                        //c.RootUrl(req => GetRootUrlFromAppConfig());
+                    // By default, the service root url is inferred from the request used to access the docs.
+                    // However, there may be situations (e.g. proxy and load-balanced environments) where this does not
+                    // resolve correctly. You can workaround this by providing your own code to determine the root URL.
+                    //
+                    //c.RootUrl(req => GetRootUrlFromAppConfig());
+                    //c.RootUrl(req => 
+                    //{
+                    //    return req.RequestUri.Authority;
+                    //});
 
                         // If schemes are not explicitly provided in a Swagger 2.0 document, then the scheme used to access
                         // the docs is taken as the default. If your API supports multiple schemes and you want to be explicit
@@ -32,7 +36,7 @@ namespace Swagger.WebApi
                         // hold additional metadata for an API. Version and title are required but you can also provide
                         // additional fields by chaining methods off SingleApiVersion.
                         //
-                        c.SingleApiVersion("v1", "API List");
+                        c.SingleApiVersion("v1", "Swagger.WebMvc");
 
                         // If your API has multiple versions, use "MultipleApiVersions" instead of "SingleApiVersion".
                         // In this case, you must provide a lambda that tells Swashbuckle which actions should be
@@ -187,7 +191,8 @@ namespace Swagger.WebApi
                         //
                         //c.InjectJavaScript(thisAssembly, "Swashbuckle.Dummy.SwaggerExtensions.testScript1.js");
                         //路径规则，项目命名空间.文件夹名称.js文件名称
-                        c.InjectJavaScript(thisAssembly, "Swagger.WebApi.Scripts.swagger_ui.swagger_zh-cn.js");
+
+
                         // The swagger-ui renders boolean data types as a dropdown. By default, it provides "true" and "false"
                         // strings as the possible choices. You can use this option to change these to something else,
                         // for example 0 and 1.
@@ -246,7 +251,7 @@ namespace Swagger.WebApi
 
         protected static string GetXmlCommentsPath()
         {
-            return string.Format(@"{0}\bin\Swagger.WebApi.XML", System.AppDomain.CurrentDomain.BaseDirectory);
+            return string.Format(@"{0}bin\Swagger.WebMvc.XML", System.AppDomain.CurrentDomain.BaseDirectory);
         }
     }
 }
