@@ -7,7 +7,7 @@ using System.Web.Mvc;
 namespace Swagger.WebMvc.Controllers
 {
     /// <summary>
-    /// 测评活动相关接口
+    /// 测评活动相关接口-获取活动详情，创建活动、删除活动等
     /// </summary>
     public class ActivityController : Controller
     {
